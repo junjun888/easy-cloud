@@ -1,0 +1,47 @@
+server:
+  port: 9200
+spring:
+  application:
+    name: service-zuul
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+# 注意 服务名要大写
+#zuul:
+#  routes:
+#    server-a:
+#      path: /server-a/**
+#      serviceId: SERVER-A
+#    server-b:
+#      path: /server-b/**
+#      serviceId: SERVER-B
+
+# 配置 配置服务的配置
+spring:
+    cloud:
+        config:
+            discovery:
+                enabled: true
+                service-id: CONFIG
+            profile: dev
+
+        # cloud bus 消息总线配置
+        bus:
+            enabled: true
+            trace:
+                enabled: true
+    # mq 配置
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: bus-refresh
