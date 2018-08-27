@@ -25,6 +25,14 @@
         <spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
     </properties>
 
+    <modules>
+        <module>api-getway</module>
+        <module>config-server</module>
+        <module>eureka-server</module>
+        <module>server-a</module>
+        <module>server-b</module>
+    </modules>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>

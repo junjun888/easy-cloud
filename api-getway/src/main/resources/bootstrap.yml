@@ -5,11 +5,6 @@ spring:
     name: service-zuul
   profiles:
       active: dev
-  rabbitmq:
-      host: localhost
-      port: 5672
-      username: guest
-      password: guest
   # 在注册中心 寻找 CONFIG-SERVER， 并且 找到 service-zuul-dev 名字的配置文档
   cloud:
       config:
