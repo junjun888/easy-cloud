@@ -1,0 +1,34 @@
+server:
+  port: 9200
+spring:
+  application:
+    name: service-zuul
+  profiles:
+      active: dev
+  rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
+  # 在注册中心 寻找 CONFIG-SERVER， 并且 找到 service-zuul-dev 名字的配置文档
+  cloud:
+      config:
+          discovery:
+              enabled: true
+              service-id: CONFIG-SERVER
+          profile: dev
+      bus:
+          enabled: true
+          trace:
+              enabled: true
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9000/eureka/
+
+management:
+    endpoints:
+        web:
+            exposure:
+                include: bus-refresh
