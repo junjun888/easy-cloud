@@ -3,6 +3,12 @@
 
 [TOC]
 
+## 版本 和 要求
+
+- easy-cloud , 及子工程依赖于 Finchley.RELEASE
+- 需要安装 zipkin 服务, boot2.0 以后建议使用 自建 zipkin 服务.
+- 需要安装 rabbitmq 服务, springcloud-bus 中使用 rabbitmq 作为消息中间件
+
 ## 已实现
 ----
 
