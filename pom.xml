@@ -29,6 +29,7 @@
         <module>api-getway</module>
         <module>config-server</module>
         <module>eureka-server</module>
+        <module>monitor-server</module>
         <module>server-a</module>
         <module>server-b</module>
     </modules>
