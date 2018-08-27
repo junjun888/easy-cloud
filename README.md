@@ -6,9 +6,7 @@
 ## 已实现
 ----
 
--  eureka-server 和 eureka-client  
-- zull 网关 + spring-cloud-bus + github 实现了动态路由
-- config-server 和 config-client
+- 动态路由, 实现技术 eueka server & client + config server & client + rabbitmq + zuul
 
 ----
 
@@ -19,7 +17,6 @@
 - 认证授权服务
 - 链路追踪
 - sql 监控
-
 - boot 脚手架平台
 ----
 
