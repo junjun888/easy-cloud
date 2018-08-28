@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: monitor-server
+server:
+  port: 9300
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+
+# 暴露信息 用于监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
