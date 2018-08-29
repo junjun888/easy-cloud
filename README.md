@@ -14,9 +14,13 @@
 
 - 动态路由, 实现技术 eueka server & client + config server & client + rabbitmq + zuul
 
-- 链路追踪， 实现技术 feign + zipkin
+- 链路追踪, 实现技术 feign + zipkin
+> 参考链接： https://windmt.com/2018/04/24/spring-cloud-12-sleuth-zipkin/
 
-- 服务监控， 实现技术 springboot admin 2.0
+- 服务监控, 实现技术 springboot admin 2.0
+> 参考链接： https://windmt.com/2018/05/22/spring-boot-admin-guide/
+
+
 
 ----
 
@@ -24,8 +28,12 @@
 
 ----
 
-- 认证授权服务
-- sql 监控
+- 接口监控, Hystrix Dashboard来实时查看接口的运行状态和调用频率等。
+
+- 认证授权服务 (用户调用鉴权（网关实现） + 服务间调用鉴权（自定义 starter 去实现, 优先）)
+> 参考链接：https://blog.csdn.net/u011282930/article/details/80131534
+
 - boot 脚手架平台
+
 ----
 

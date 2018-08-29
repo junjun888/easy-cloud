@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @Description:
  * @Date: Created in 16:38  2018/8/27
  **/
-@FeignClient("server-b")
-public interface ServerBAPI {
+@FeignClient(value = "server-b", fallback = ServerBApiHystric.class)
+public interface ServerBApi {
 
 	@RequestMapping(method = RequestMethod.GET, value = "/hi")
 	String hi();

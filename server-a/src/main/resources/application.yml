@@ -29,3 +29,8 @@ management:
   endpoint:
     health:
       show-details: ALWAYS
+
+# ¿ªÆô·şÎñÈÛ¶Ï
+feign:
+  hystrix:
+    enabled: true

@@ -1,14 +1,18 @@
 package org.hwj.servera;
 
-import org.hwj.servera.feign.ServerBAPI;
+import org.hwj.servera.feign.ServerBApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@EnableCircuitBreaker
+@EnableHystrix
 @EnableFeignClients
 @EnableEurekaClient
 @RestController
@@ -25,10 +29,10 @@ public class ServerAApplication {
 	}
 
 	@Autowired
-	ServerBAPI serverBAPI;
+	ServerBApi serverBApi;
 
 	@RequestMapping(value = "/hi-feign")
 	public String hiFeign(){
-		return serverBAPI.hi() + " , caller b";
+		return serverBApi.hi() + " , caller a";
 	}
 }
